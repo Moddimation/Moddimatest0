@@ -41,7 +41,7 @@ endif
 
 #--------------------------------------------------------------
 
-TARGET 			:=  Mochimatest0# Project Name
+TARGET 			:=  Moddimatest0# Project Name
 
 ifeq ($(WORKFLOW),1)
   ifeq ($(DEBUG),1)
@@ -65,7 +65,7 @@ VERSION_MINOR	:= 5
 VERSION_MICRO	:= 4
 
 # 3dsx
-APP_DESCRIPTION :=  "Mochimatic\ Test\ 0:\ Paper" # HB Channel Description
+APP_DESCRIPTION :=  "Moddimation\ Test\ 0:\ Paper" # HB Channel Description
 APP_AUTHOR		:=  "Moddimation" # HB Channel Author
 ICON			:=	$(META)/icon.png
 
@@ -185,10 +185,8 @@ endif
 # tools
 #---------------------------------------------------------------------------------------
 ifneq ($(OS),Windows_NT)
-BANNERTOOL   ?= tools/bannertool
-MAKEROM      ?= tools/makerom
+MAKEROM      ?= makerom
 else
-BANNERTOOL   ?= tools/bannertool.exe
 MAKEROM      ?= tools/makerom.exe
 endif
 
@@ -312,11 +310,9 @@ else
 DEPENDS	:=	$(OFILES:.o=.d)
 
 ifneq ($(OS),Windows_NT)
-BANNERTOOL   ?= ../tools/bannertool
-MAKEROM      ?= ../tools/makerom
+BANNERTOOL   ?= bannertool
 else
 BANNERTOOL   ?= ../tools/bannertool.exe
-MAKEROM      ?= ../tools/makerom.exe
 endif
 
 
